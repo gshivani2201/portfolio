@@ -1,0 +1,43 @@
+.experience-section {
+    .experience-content-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 4em;
+
+        .experiences-list {
+
+            .list-container {
+                border-right: 3px solid #f2e9e4;
+                max-width: 100px;
+                padding-left: 53%;
+
+                li {
+                    list-style-type: none;
+                    position: relative;
+                    padding: 0 16px;
+                    font-size: 1.3em;
+
+                    .circle {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: #f2e9e4;
+                        position: absolute;
+                        left: 95%;
+                        top: 24%;
+                    }
+                }
+            }
+        }
+
+        .selected-experience-summary {
+            text-align: left;
+            padding: 0 10em 0 3em;
+
+            .date-location {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

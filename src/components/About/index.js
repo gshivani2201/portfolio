@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./style.scss";
+
 const skills = [
   {
     "Programming Language": ["JavaScript", "HTML", "CSS"],
@@ -16,7 +18,7 @@ const skills = [
     ],
   },
   {
-    Database: ["MongoDB", "MySQL"],
+    "Database": ["MongoDB", "MySQL"],
   },
   {
     "Tools & Platforms": [
@@ -33,7 +35,7 @@ const skills = [
 
 function About() {
   return (
-    <div>
+    <div className="about-container">
       <div>
         <h1>Shivani Gupta</h1>
         <h3>Frontend web developer</h3>
@@ -53,17 +55,17 @@ function About() {
         </p>
       </div>
       <div>
-        <h3>Skills</h3>
-        <div>
+        {/* <h3>Skills</h3> */}
+        <div className="skills-section">
           {skills.map((skill, i) => {
             const title = Object.keys(skill)[0];
             return (
-              <div key={i}>
+              <div key={i} className="skills-container">
                 <h5>{title}</h5>
-                <div>
+                <div className="skills-list">
                   {skill[title].map((item, id) => {
                     return (
-                      <div key={id}>
+                      <div key={id} className="skill-item">
                         <p>{item}</p>
                       </div>
                     );

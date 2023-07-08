@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 56px;
 
     .header-container {
         display: flex;
@@ -14,11 +15,11 @@
             justify-content: space-between;
             font-size: 20px;
 
-            >svg {
-                cursor: pointer;
+            a {
+                color: inherit;
             }
 
-            >h4 {
+            h4 {
                 cursor: pointer;
                 font-size: 16px;
             }

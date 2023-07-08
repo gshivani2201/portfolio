@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import ProjectCard from "./ProjectCard";
+
+//styles
+import "./style.scss";
 
 function Projects() {
   return (
-    <div>Projects</div>
-  )
+    <div>
+      <ProjectCard />
+    </div>
+  );
 }
 
-export default Projects
+export default Projects;
