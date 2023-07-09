@@ -20,6 +20,7 @@ function App() {
         setActiveTab={setActiveTab}
         activeTab={activeTab}
         openModal={() => setOpenContactModal(!openContactModal)}
+        openContactModal={openContactModal}
       />
       <RenderView activeTab={activeTab} />
       <Contact

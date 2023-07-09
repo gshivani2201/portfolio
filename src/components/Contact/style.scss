@@ -6,12 +6,14 @@
     outline: none;
     padding: 24px;
     background-color: #f2e9e4;
-    width: 40%;
+    width: 30%;
     margin: auto;
     height: fit-content;
     color: #22223b;
     max-height: 70vh;
     overflow-y: auto;
+    min-width: 10vw;
+    max-width: 40vw;
 
     .heading-content {
         display: flex;

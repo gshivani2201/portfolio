@@ -1,15 +1,19 @@
 import React from "react";
 
 //styles
-import "./style.scss"
+import "./style.scss";
 
-function ProjectCard() {
+function ProjectCard({ title, imageUrl, url, content }) {
   return (
-    <div className="project-card">
-      <div className="title">title</div>
-      <div className="image">image</div>
-      <div className="summary">summary</div>
-    </div>
+    <a href={url} className="card-link">
+      <div className="project-card">
+        <div className="title">{title}</div>
+        <div className="image-container">
+          <img src={imageUrl} alt={title} className="image" />
+        </div>
+        <div className="summary">{content}</div>
+      </div>
+    </a>
   );
 }
 

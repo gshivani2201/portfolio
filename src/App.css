@@ -8,7 +8,7 @@
   text-align: center;
   background-color: #22223b;
   color: #f2e9e4;
-  height: calc(100vh - 96px);
+  min-height: calc(100% - 96px);
   padding: 48px;
 }
 

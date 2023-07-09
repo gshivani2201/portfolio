@@ -1,6 +1,10 @@
 import React from "react";
 
+//styles
 import "./style.scss";
+
+//3rd party packages
+import WavingHandIcon from '@mui/icons-material/WavingHand';
 
 const skills = [
   {
@@ -105,13 +109,13 @@ function About() {
   return (
     <div className="about-container">
       <div className="greeting-section">
-        <h1 className="name">Hi there! I am Shivani Gupta</h1>
+        <h1 className="name">Hi there! <WavingHandIcon sx={{fontSize: "40px", verticalAlign: "middle"}}/> I am Shivani Gupta</h1>
         <h3 className="current-role">Frontend Web Developer at ParallelDots</h3>
       </div>
       <div className="about-me">
         <p className="para first">
           From belonging to a non-technical education background to becoming a
-          full stack web developer, I have accumulated vast knowledge and 2
+          full stack web developer, I have accumulated vast knowledge and 1.5+
           years of professional working experience on significant frontend
           technologies like React.js, jQuery, Redux toolkit and Node.js,
           Express.js for backend along with other internal libraries, with

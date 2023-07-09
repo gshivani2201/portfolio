@@ -1,5 +1,39 @@
+.card-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f2e9e4;
+}
+
 .project-card {
     border: 1px solid #f2e9e4;
-    max-width: 350px;
-    height: 40vh;
+    width: 350px;
+    height: 350px;
+    min-width: 200px;
+    transition: margin-top 100ms;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
+        margin-top: -10px;
+    }
+
+    .title {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 600;
+        color: #C9ADA7;
+    }
+
+    .image-container {
+        height: 175px;
+
+        .image {
+            width: 100%;
+        }
+    }
+
+    .summary {
+        font-size: 16px;
+        padding: 10px;
+    }
 }

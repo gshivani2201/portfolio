@@ -5,23 +5,46 @@
     justify-content: space-between;
     height: 56px;
 
+    .tab-box {
+        padding: 1em;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom: 1px solid #f2e9e4;
+        }
+    }
+
+    .tab-box.active {
+        border-bottom: none;
+        border-radius: 5px;
+        background: #C9ADA7;
+        color: #22223b;
+    }
+
     .header-container {
         display: flex;
 
         .icons-container {
-            width: 200px;
+            // width: 200px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             font-size: 20px;
+
+            .icons {
+                display: flex;
+                column-gap: 16px;
+            }
 
             a {
                 color: inherit;
             }
 
             h4 {
-                cursor: pointer;
+                // cursor: pointer;
                 font-size: 16px;
+                margin-left: 10px;
             }
         }
     }
@@ -30,18 +53,5 @@
         display: flex;
         align-items: center;
         column-gap: 8px;
-
-        .tab-box {
-            padding: 1em;
-            text-transform: capitalize;
-            cursor: pointer;
-        }
-
-        .tab-box.active {
-            /* border-bottom: 1px solid #f2e9e4; */
-            border-radius: 5px;
-            background: #C9ADA7;
-            color: #22223b;
-        }
     }
 }
