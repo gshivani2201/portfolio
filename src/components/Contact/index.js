@@ -67,7 +67,6 @@ function Contact({ openContactModal, closeModal }) {
     <>
       <Modal
         isOpen={openContactModal}
-        // onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={styles}
         className="Modal"

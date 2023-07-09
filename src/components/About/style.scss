@@ -2,6 +2,37 @@
     text-align: left;
     padding: 24px 32px;
 
+    h3,
+    h4 {
+        color: #C9ADA7;
+    }
+
+    .greeting-section {
+        margin-bottom: 2em;
+
+        .name {
+            font-size: 40px;
+        }
+
+        .current-role {
+            font-weight: 500;
+            font-size: 20px;
+            margin-top: 8px;
+        }
+    }
+
+    .about-me {
+        margin: 10px 0;
+
+        .para {
+            margin: 0;
+        }
+
+        .first {
+            margin-bottom: 10px;
+        }
+    }
+
     .skills-section {
         display: grid;
         grid-template-columns: auto auto;
@@ -16,10 +47,21 @@
                 gap: 10px;
                 margin: 10px 0;
 
+                a {
+                    text-decoration: none;
+                    color: #f2e9e4;
+                }
+
                 .skill-item {
                     border: 1px solid #f2e9e4;
                     padding: 8px 16px;
                     border-radius: 16px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #f2e9e4;
+                        color: #22223b;
+                    }
 
                     >p {
                         margin: 0;

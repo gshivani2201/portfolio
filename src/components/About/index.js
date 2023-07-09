@@ -4,31 +4,99 @@ import "./style.scss";
 
 const skills = [
   {
-    "Programming Language": ["JavaScript", "HTML", "CSS"],
-  },
-  {
-    "Libraries & Frameworks": [
-      "Node.js",
-      "Express.js",
-      "React.js",
-      "Redux",
-      "jQuery",
-      "Material UI",
-      "BootStrap",
+    title: "Programming Languages",
+    tech: [
+      {
+        tech_name: "JavaScript",
+        url: "https://javascript.info/",
+      },
+      {
+        tech_name: "HTML",
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      },
+      {
+        tech_name: "CSS",
+        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      },
     ],
   },
   {
-    "Database": ["MongoDB", "MySQL"],
+    title: "Libraries & Frameworks",
+    tech: [
+      {
+        tech_name: "Node.js",
+        url: "https://nodejs.org/",
+      },
+      {
+        tech_name: "Express.js",
+        url: "https://expressjs.com/",
+      },
+      {
+        tech_name: "React.js",
+        url: "https://react.dev/",
+      },
+      {
+        tech_name: "Redux",
+        url: "https://redux.js.org/",
+      },
+      {
+        tech_name: "jQuery",
+        url: "https://jquery.com/",
+      },
+      {
+        tech_name: "Material UI",
+        url: "https://mui.com/",
+      },
+      {
+        tech_name: "BootStrap",
+        url: "https://getbootstrap.com/",
+      },
+    ],
   },
   {
-    "Tools & Platforms": [
-      "VSCode",
-      "Git",
-      "GitHub",
-      "Netlify",
-      "Render",
-      "FireBase",
-      "AWS",
+    title: "Databases",
+    tech: [
+      {
+        tech_name: "MongoDB",
+        url: "https://www.mongodb.com/",
+      },
+      {
+        tech_name: "MySQL",
+        url: "https://www.mysql.com/",
+      },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    tech: [
+      {
+        tech_name: "VSCode",
+        url: "https://code.visualstudio.com/",
+      },
+      {
+        tech_name: "Git",
+        url: "https://git-scm.com/",
+      },
+      {
+        tech_name: "GitHub",
+        url: "https://github.com/",
+      },
+      {
+        tech_name: "Netlify",
+        url: "https://www.netlify.com/",
+      },
+      {
+        tech_name: "Render",
+        url: "https://render.com/",
+      },
+      {
+        tech_name: "FireBase",
+        url: "https://firebase.google.com/",
+      },
+      {
+        tech_name: "AWS",
+        url: "https://aws.amazon.com/",
+      },
     ],
   },
 ];
@@ -36,40 +104,42 @@ const skills = [
 function About() {
   return (
     <div className="about-container">
-      <div>
-        <h1>Shivani Gupta</h1>
-        <h3>Frontend web developer</h3>
+      <div className="greeting-section">
+        <h1 className="name">Hi there! I am Shivani Gupta</h1>
+        <h3 className="current-role">Frontend Web Developer at ParallelDots</h3>
       </div>
-      <div>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+      <div className="about-me">
+        <p className="para first">
+          From belonging to a non-technical education background to becoming a
+          full stack web developer, I have accumulated vast knowledge and 2
+          years of professional working experience on significant frontend
+          technologies like React.js, jQuery, Redux toolkit and Node.js,
+          Express.js for backend along with other internal libraries, with
+          working on real-life projects.
         </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+        <p className="para second">
+          I am determined to use my knowledge to solve real-world problems
+          efficiently with an open-minded and curious approach.
         </p>
       </div>
       <div>
         {/* <h3>Skills</h3> */}
         <div className="skills-section">
           {skills.map((skill, i) => {
-            const title = Object.keys(skill)[0];
             return (
               <div key={i} className="skills-container">
-                <h5>{title}</h5>
+                <h4>{skill.title}</h4>
                 <div className="skills-list">
-                  {skill[title].map((item, id) => {
-                    return (
-                      <div key={id} className="skill-item">
-                        <p>{item}</p>
-                      </div>
-                    );
-                  })}
+                  {skill.tech &&
+                    skill.tech.map((item, id) => {
+                      return (
+                        <a href={item.url} target="_blank" rel="noreferrer">
+                          <div key={id} className="skill-item">
+                            <p>{item.tech_name}</p>
+                          </div>
+                        </a>
+                      );
+                    })}
                 </div>
               </div>
             );
