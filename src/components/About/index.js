@@ -137,8 +137,8 @@ function About() {
                   {skill.tech &&
                     skill.tech.map((item, id) => {
                       return (
-                        <a href={item.url} target="_blank" rel="noreferrer">
-                          <div key={id} className="skill-item">
+                        <a href={item.url} target="_blank" rel="noreferrer" key={id}>
+                          <div className="skill-item">
                             <p>{item.tech_name}</p>
                           </div>
                         </a>

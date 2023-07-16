@@ -5,7 +5,7 @@
 }
 
 .App {
-  text-align: center;
+  /* text-align: center; */
   background-color: #22223b;
   color: #f2e9e4;
   min-height: calc(100% - 96px);
@@ -23,4 +23,10 @@ h6 {
 
 .hide {
   display: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  right: 96px;
 }

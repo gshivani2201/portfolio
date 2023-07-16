@@ -4,6 +4,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 24px 32px;
+    text-align: center;
+}
+
+.MuiPagination-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .MuiPagination-ul {
         button {

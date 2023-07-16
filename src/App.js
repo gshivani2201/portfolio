@@ -27,6 +27,7 @@ function App() {
         closeModal={() => setOpenContactModal(!openContactModal)}
         openContactModal={openContactModal}
       />
+      {/* <div className="footer">&#169; Shivani Gupta | 2023</div> */}
     </div>
   );
 }
