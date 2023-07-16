@@ -1,0 +1,59 @@
+.card-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f2e9e4;
+}
+
+.project-card {
+    border: 1px solid #f2e9e4;
+    width: 350px;
+    height: 370px;
+    min-width: 200px;
+    transition: margin-top 100ms;
+    border-radius: 5px;
+    position: relative;
+
+    &:hover {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
+        margin-top: -10px;
+    }
+
+    .title {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 600;
+        color: #C9ADA7;
+    }
+
+    .image-container {
+        height: 175px;
+
+        .image {
+            width: 100%;
+        }
+    }
+
+    .summary {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 0 10px 10px;
+            
+    
+            a {
+                text-decoration: none;
+                color: #C9ADA7;
+            }
+        }
+    }
+}
