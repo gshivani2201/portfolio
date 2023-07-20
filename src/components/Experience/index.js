@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const experiences = [
   "Junior Frontend Developer",
-  "Frontend Deeveloper intern",
+  "Frontend Developer intern",
   "Web Developer",
 ];
 
@@ -40,7 +40,12 @@ function Experience() {
   return (
     <>
       <div className="experience-section">
-        <a href="#" className="download-btn">
+        <a
+          href="shivani-gupta-resume.pdf"
+          className="download-btn"
+          download="shivani_gupta_resume"
+          target="_blank"
+        >
           {" "}
           <FontAwesomeIcon icon={faDownload} /> Download Resume
         </a>

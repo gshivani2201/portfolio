@@ -19,7 +19,8 @@ import { Pagination, Stack } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {
-  const [pageCount, setPageCount] = useState(3);
+  const pageCount = 3;
+
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
@@ -95,7 +96,5 @@ function Projects() {
     </>
   );
 }
-
-//
 
 export default Projects;

@@ -8,29 +8,10 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 //style
 import "./style.scss";
 
-function Header({
-  tabsList,
-  activeTab,
-  setActiveTab,
-  openModal,
-  openContactModal,
-}) {
+function Footer({ openContactModal, openModal }) {
   return (
-    <div className="navigation-header">
-      <div className="navigation-container">
-        {tabsList.map((tabName, i) => {
-          return (
-            <div
-              className={`tab-box ${activeTab === tabName ? "active" : ""}`}
-              key={i}
-              onClick={() => setActiveTab(tabName)}
-            >
-              <h4 className="tab-name">{tabName.split("_").join(" ")}</h4>
-            </div>
-          );
-        })}
-      </div>
-      <div className="header-container hide-mobile">
+    <div className="mobile-footer hide-desktop">
+      <div className="footer-container">
         <div className="icons-container">
           <div className="icons">
             <a href="mailto:gupta.shivani7898@gmail.com">
@@ -52,7 +33,7 @@ function Header({
             </a>
           </div>
           <h4
-            className={`tab-box ${openContactModal ? "active" : ""}`}
+            className="contact-btn"
             onClick={openModal}
           >
             Contact Me
@@ -63,4 +44,4 @@ function Header({
   );
 }
 
-export default Header;
+export default Footer;
