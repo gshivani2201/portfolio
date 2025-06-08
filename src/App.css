@@ -5,11 +5,9 @@
 }
 
 .App {
-  /* text-align: center; */
   background-color: #22223b;
   color: #f2e9e4;
-  min-height: calc(100% - 96px);
-  padding: 48px;
+  height: 100vh;
 }
 
 h1,
@@ -29,4 +27,21 @@ h6 {
   position: absolute;
   bottom: 20px;
   right: 96px;
+}
+
+.content-btn {
+  text-decoration: none;
+  color: #22223b;
+  background: #c9ada7;
+  padding: 16px 48px;
+  border-radius: 8px;
+  border: 1px solid #22223b;
+}
+
+.content-btn:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #c9ada7;
+  border: 1px solid #c9ada7;
+  background: #22223b;
 }

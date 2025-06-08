@@ -11,6 +11,7 @@ import YouText from "../../assets/youtext.png";
 import ImageDisplayer from "../../assets/image-displayer.png";
 import TodoApp from "../../assets/todo-app.png";
 import Postinger from "../../assets/postinger.png";
+import Friendlee from "../../assets/friendlee.png";
 
 //3rd party
 import { Pagination, Stack } from "@mui/material";
@@ -28,6 +29,13 @@ function Projects() {
         {currentPage === 1 ? (
           <>
             <ProjectCard
+              title="Friendlee"
+              imageUrl={Friendlee}
+              url="https://friendlee.vercel.app/"
+              content="A social media app where user can create an account, add friends & chat real time. Developed using React.js, Express.js and Graphql and MongoDB."
+              github="https://github.com/gshivani2201/chatapp-frontend"
+            />
+            <ProjectCard
               title="Postinger"
               imageUrl={Postinger}
               url="http://postinger.s3-website.ap-south-1.amazonaws.com/"
@@ -41,13 +49,6 @@ function Projects() {
               content="Deliciouss is a recipe app. User can choose between 4 types of cuisines or also can search for almost any kind of recipe using searchbar. It is developed using React.js. Happy cooking!"
               github="https://github.com/gshivani2201/Recipe-app"
             />
-            <ProjectCard
-              title="EcomStore"
-              imageUrl={NodeApp}
-              url="https://ecomstore-9o2v.onrender.com/"
-              content="EcomStore is an online shopping full stack web app. It has authentication enabled to signup/login along with Admin Panel to create or delete product. Mainly developed using Express.js, and MongoDB."
-              github="https://github.com/gshivani2201/nodejs_complete_guide"
-            />
           </>
         ) : currentPage === 2 ? (
           <>
@@ -59,11 +60,28 @@ function Projects() {
               github="https://github.com/gshivani2201/online-shop"
             />
             <ProjectCard
+              title="EcomStore"
+              imageUrl={NodeApp}
+              url="https://ecomstore-9o2v.onrender.com/"
+              content="EcomStore is an online shopping full stack web app. It has authentication enabled to signup/login along with Admin Panel to create or delete product. Mainly developed using Express.js, and MongoDB."
+              github="https://github.com/gshivani2201/nodejs_complete_guide"
+            />
+            <ProjectCard
               title="Image Displayer"
               imageUrl={ImageDisplayer}
               url="https://image-displayer.netlify.app/"
               content="Image Displayer fetches 100 images from an API and displays it. Sorting is enabled on the basis of user input in searchbar. Developed using React.js."
               github="https://github.com/gshivani2201/image-displayer"
+            />
+          </>
+        ) : (
+          <>
+            <ProjectCard
+              title="Todo App"
+              imageUrl={TodoApp}
+              url="https://shivani-todo.netlify.app/"
+              content="Todo app creates, edits and displays list of todos that the user enters. It is developed using React.js."
+              github="https://github.com/gshivani2201/ReactTodoApp"
             />
             <ProjectCard
               title="YouText"
@@ -73,14 +91,6 @@ function Projects() {
               github="https://github.com/gshivani2201/YouText"
             />
           </>
-        ) : (
-          <ProjectCard
-            title="Todo App"
-            imageUrl={TodoApp}
-            url="https://shivani-todo.netlify.app/"
-            content="Todo app creates, edits and displays list of todos that the user enters. It is developed using React.js."
-            github="https://github.com/gshivani2201/ReactTodoApp"
-          />
         )}
       </div>
       <Stack spacing={2} sx={{ margin: "auto" }}>

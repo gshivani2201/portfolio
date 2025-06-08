@@ -1,96 +1,107 @@
 .experience-section {
-    padding: 0 32px;
+  padding: 0 32px;
+
+  .btn-container {
+    width: 100%;
+    text-align: center;
 
     .download-btn {
-        text-decoration: none;
-        color: #22223b;
-        background: #C9ADA7;
-        padding: 8px;
-        border-radius: 8px;
-        margin-left: 10px;
-        font-size: 12px;
+      text-decoration: none;
+      color: #22223b;
+      background: #c9ada7;
+      padding: 16px 48px;
+      border-radius: 8px;
+      border: 1px solid #22223b;
+
+      &:hover {
+        cursor: pointer;
+        transition: all 0.3s;
+        color: #c9ada7;
+        border: 1px solid #c9ada7;
+        background: #22223b;
+      }
     }
+  }
 
-    .experience-content-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 4em;
+  .experience-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4em;
 
-        .experiences-list {
+    .experiences-list {
+      .list-container {
+        padding-left: 40%;
+        text-align: left;
+        transform: none;
 
-            .list-container {
-                padding-left: 40%;
-                text-align: left;
-                transform: none;
+        .swiper-pagination-bullet {
+          list-style-type: none;
+          position: relative;
+          padding: 0 16px;
+          font-size: 1.3em;
+          background-color: transparent;
+          color: #f2e9e4;
+          margin: 24px;
+          width: auto;
+          height: auto;
+          border-radius: inherit;
 
-                .swiper-pagination-bullet {
-                    list-style-type: none;
-                    position: relative;
-                    padding: 0 16px;
-                    font-size: 1.3em;
-                    background-color: transparent;
-                    color: #f2e9e4;
-                    margin: 24px;
-                    width: auto;
-                    height: auto;
-                    border-radius: inherit;
-
-                    .circle {
-                        width: 12px;
-                        height: 12px;
-                        border-radius: 50%;
-                        background: #f2e9e4;
-                        position: absolute;
-                        left: 95%;
-                        top: 24%;
-                    }
-                }
-
-                .swiper-pagination-bullet-active {
-                    font-weight: 600;
-                }
-            }
+          .circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f2e9e4;
+            position: absolute;
+            left: 95%;
+            top: 24%;
+          }
         }
 
-        .selected-experience-summary {
-            text-align: left;
-            padding: 0 10em 0 3em;
-
-            .date-location {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .summary p {
-                color: #C9ADA7;
-            }
-
-            .responsibilities-list {
-                li {
-                    margin: 8px 0;
-                }
-            }
+        .swiper-pagination-bullet-active {
+          font-weight: 600;
         }
+      }
     }
+
+    .selected-experience-summary {
+      text-align: left;
+      padding: 0 10em 0 3em;
+
+      .date-location {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .summary p {
+        color: #c9ada7;
+      }
+
+      .responsibilities-list {
+        li {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
 }
 
 .swiper {
-    height: calc(100vh - 350px);
+  height: calc(100vh - 350px);
 }
 
 .swiper-slide {
-    // text-align: center;
-    font-size: 18px;
+  // text-align: center;
+  font-size: 18px;
 
-    /* Center slide text vertically */
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+  /* Center slide text vertically */
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

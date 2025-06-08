@@ -4,7 +4,11 @@ import React from "react";
 import "./style.scss";
 
 //3rd party packages
-import WavingHandIcon from '@mui/icons-material/WavingHand';
+import WavingHandIcon from "@mui/icons-material/WavingHand";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+
+import resume from "../../assets/files/Shivani_Gupta_Resume.pdf";
 
 const skills = [
   {
@@ -106,24 +110,57 @@ const skills = [
 ];
 
 function About() {
+  // Function to calculate years of experience
+  function calculateExperience(startDate) {
+    const today = new Date(); // Current date as per provided context
+    const start = new Date(startDate); // Start date of experience
+
+    console.log(today);
+    console.log(start);
+
+    // Calculate the difference in years
+    let years = today.getFullYear() - start.getFullYear();
+    const months = today.getMonth() - start.getMonth();
+
+    // Adjust if the current date hasn't reached the start date's month/day
+    if (months < 0 || (months === 0 && today.getDate() < start.getDate())) {
+      years--;
+    }
+
+    // Return years with one decimal place for partial years
+    const totalYears = (today - start) / (1000 * 60 * 60 * 24 * 365.25);
+    return Math.ceil(totalYears);
+  }
+
   return (
     <div className="about-container">
       <div className="greeting-section">
-        <h1 className="name">Hi there! <WavingHandIcon sx={{fontSize: "40px", verticalAlign: "middle"}}/> I am Shivani Gupta</h1>
-        <h3 className="current-role">Frontend Web Developer at ParallelDots</h3>
+        <h1 className="name">
+          Hi there!{" "}
+          <WavingHandIcon sx={{ fontSize: "40px", verticalAlign: "middle" }} />{" "}
+          I am Shivani Gupta
+        </h1>
+        <h3 className="current-role">Frontend Developer at ParallelDots</h3>
+      </div>
+      <div className="btn-container">
+        <a href={resume} className="download-btn content-btn">
+          {" "}
+          <FontAwesomeIcon icon={faDownload} /> Download Resume
+        </a>
       </div>
       <div className="about-me">
         <p className="para first">
-          From belonging to a non-technical education background to becoming a
-          full stack web developer, I have accumulated vast knowledge and 1.5+
-          years of professional working experience on significant frontend
-          technologies like React.js, jQuery, Redux toolkit and Node.js,
-          Express.js for backend along with other internal libraries, with
-          working on real-life projects.
+          From a non-technical background to a skilled Full Stack Web Developer,
+          I’ve honed expertise in modern technologies like React.js, Redux
+          Toolkit, jQuery, Node.js, and Express.js. With over{" "}
+          {calculateExperience("2022-06-16")} years of professional experience
+          building real-world projects, I’m passionate about crafting efficient,
+          innovative solutions to solve complex problems.
         </p>
         <p className="para second">
-          I am determined to use my knowledge to solve real-world problems
-          efficiently with an open-minded and curious approach.
+          My approach is driven by curiosity, adaptability, and a commitment to
+          creating impactful digital experiences. Explore my work to see how I
+          transform ideas into reality!
         </p>
       </div>
       <div>
@@ -137,7 +174,12 @@ function About() {
                   {skill.tech &&
                     skill.tech.map((item, id) => {
                       return (
-                        <a href={item.url} target="_blank" rel="noreferrer" key={id}>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={id}
+                        >
                           <div className="skill-item">
                             <p>{item.tech_name}</p>
                           </div>

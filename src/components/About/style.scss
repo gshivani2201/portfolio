@@ -1,74 +1,86 @@
 .about-container {
-    text-align: left;
-    padding: 24px 32px;
+  text-align: left;
+  padding: 24px 32px;
 
-    h3,
-    h4 {
-        color: #C9ADA7;
+  h3,
+  h4 {
+    color: #c9ada7;
+  }
+
+  .greeting-section {
+    margin-bottom: 1em;
+
+    .name {
+      font-size: 40px;
     }
 
-    .greeting-section {
-        margin-bottom: 2em;
+    .current-role {
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 8px;
+    }
+  }
 
-        .name {
-            font-size: 40px;
-        }
+  .btn-container {
+    margin-bottom: 2em;
 
-        .current-role {
-            font-weight: 500;
-            font-size: 20px;
-            margin-top: 8px;
-        }
+    .download-btn {
+      padding: 12px 32px;
+      display: block;
+      width: fit-content;
+      font-size: 14px;
+    }
+  }
+
+  .about-me {
+    margin: 10px 0;
+
+    .para {
+      margin: 0;
     }
 
-    .about-me {
+    .first {
+      margin-bottom: 10px;
+    }
+  }
+
+  .skills-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 24px;
+
+    .skills-container {
+      margin: 8px 0;
+      max-width: 400px;
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
         margin: 10px 0;
 
-        .para {
+        a {
+          text-decoration: none;
+          color: #f2e9e4;
+        }
+
+        .skill-item {
+          border: 1px solid #f2e9e4;
+          padding: 8px 16px;
+          border-radius: 16px;
+          cursor: pointer;
+
+          &:hover {
+            background: #f2e9e4;
+            color: #22223b;
+          }
+
+          > p {
             margin: 0;
+            font-size: 14px;
+          }
         }
-
-        .first {
-            margin-bottom: 10px;
-        }
+      }
     }
-
-    .skills-section {
-        display: grid;
-        grid-template-columns: auto auto;
-
-        .skills-container {
-            margin: 8px 0;
-            max-width: 400px;
-
-            .skills-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 10px 0;
-
-                a {
-                    text-decoration: none;
-                    color: #f2e9e4;
-                }
-
-                .skill-item {
-                    border: 1px solid #f2e9e4;
-                    padding: 8px 16px;
-                    border-radius: 16px;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: #f2e9e4;
-                        color: #22223b;
-                    }
-
-                    >p {
-                        margin: 0;
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }

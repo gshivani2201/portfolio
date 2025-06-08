@@ -16,10 +16,12 @@ import "swiper/css/pagination";
 import "./style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import resume from "../../assets/files/Shivani_Gupta_Resume.pdf";
+
 const experiences = [
-  "Junior Frontend Developer",
-  "Frontend Deeveloper intern",
-  "Web Developer",
+  "Junior Frontend Developer, ParallelDots",
+  "Frontend Deeveloper intern, ParallelDots",
+  "Web Developer, 100Devs",
 ];
 
 function Experience() {
@@ -40,10 +42,12 @@ function Experience() {
   return (
     <>
       <div className="experience-section">
-        <a href="#" className="download-btn">
-          {" "}
-          <FontAwesomeIcon icon={faDownload} /> Download Resume
-        </a>
+        <div className="btn-container">
+          <a href={resume} className="download-btn">
+            {" "}
+            <FontAwesomeIcon icon={faDownload} /> Download Resume
+          </a>
+        </div>
         <div className="experience-content-container">
           <div className="experiences-list">
             <ul className="list-container">
