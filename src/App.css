@@ -17,6 +17,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  letter-spacing: 0.8px;
 }
 
 .hide {
@@ -44,4 +45,42 @@ h6 {
   color: #c9ada7;
   border: 1px solid #c9ada7;
   background: #22223b;
+}
+
+.xs,
+.sm,
+.md {
+  display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .lg,
+  .md {
+    display: none !important;
+  }
+
+  .xs,
+  .sm {
+    display: block !important;
+  }
+
+  .App {
+    height: auto;
+  }
+
+  p {
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .xs,
+  .sm,
+  .lg {
+    display: none !important;
+  }
+
+  .md {
+    display: block !important;
+  }
 }
