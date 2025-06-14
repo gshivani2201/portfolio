@@ -1,17 +1,8 @@
 .contact-modal {
-  inset: 40px;
-  overflow: auto;
   border-radius: 8px;
-  outline: none;
   padding: 24px;
   background-color: #f2e9e4;
-  margin: auto;
-  height: fit-content;
   color: #22223b;
-  max-height: 700px;
-  min-width: 300px;
-  max-width: 500px;
-  width: 100%;
 
   .heading-content {
     display: flex;
@@ -41,7 +32,7 @@
 
       input,
       textarea {
-        width: 100%;
+        width: 450px;
         box-sizing: border-box;
         border-radius: 8px;
         font-size: 14px;
@@ -86,7 +77,12 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
+  .MuiDialog-paper {
+    margin: 8px !important;
+    width: 100%;
+  }
+
   .contact-modal {
     height: fit-content;
 
@@ -111,6 +107,7 @@
         textarea {
           padding: 8px;
           font-size: 16px;
+          width: 100%;
         }
       }
     }
