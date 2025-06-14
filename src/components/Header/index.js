@@ -45,11 +45,11 @@ function Header({
 
   return (
     <div className="navigation-header">
-      <div className="navigation-container lg">
+      <div className="navigation-container md lg">
         {tabsList.map((tabName, i) => {
           return (
             <div
-              className={`tab-box ${activeTab === tabName ? "active" : ""}`}
+              className={`tab-box ${activeTab === tabName ? "active" : ""} ${tabName}`}
               key={i}
               onClick={() => setActiveTab(tabName)}
             >
@@ -58,7 +58,7 @@ function Header({
           );
         })}
       </div>
-      <div className="header-container lg">
+      <div className="header-container md lg">
         <div className="icons-container">
           <div className="icons">
             {additionalNavs.map(({ label, key, icon, url }) => (
@@ -67,12 +67,12 @@ function Header({
               </a>
             ))}
           </div>
-          <h4
+          <div
             className={`tab-box ${openContactModal ? "active" : ""}`}
             onClick={openModal}
           >
-            Contact Me
-          </h4>
+            <h4 className="tab-name">Contact Me</h4>
+          </div>
         </div>
       </div>
 
@@ -92,22 +92,24 @@ function Header({
             },
           }}
         >
-          <div className="navigation-container xs md">
-            {[...tabsList].map((tabName, i) => {
-              return (
-                <div
-                  key={i}
-                  onClick={() => {
-                    setActiveTab(tabName);
-                    _toggleMobileMenu();
-                  }}
-                  className="tab-box"
-                >
-                  <h4 className="tab-name">{tabName.split("_").join(" ")}</h4>
-                </div>
-              );
-            })}
-            {additionalNavs.map(({ label, key, icon, url }) => (
+          <div className="navigation-container xs sm">
+            {[...tabsList]
+              .filter((tabName) => tabName !== "experience")
+              .map((tabName, i) => {
+                return (
+                  <div
+                    key={i}
+                    onClick={() => {
+                      setActiveTab(tabName);
+                      _toggleMobileMenu();
+                    }}
+                    className="tab-box"
+                  >
+                    <h4 className="tab-name">{tabName.split("_").join(" ")}</h4>
+                  </div>
+                );
+              })}
+            {additionalNavs.map(({ label, key, url }) => (
               <a
                 href={url}
                 rel="noreferrer"
@@ -119,6 +121,15 @@ function Header({
                 {label}
               </a>
             ))}
+            <div
+              className="tab-name"
+              onClick={() => {
+                openModal();
+                _toggleMobileMenu();
+              }}
+            >
+              Contact Me
+            </div>
           </div>
         </Drawer>
       ) : null}

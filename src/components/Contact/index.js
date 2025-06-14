@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
 
 //styles
 import "./style.scss";
@@ -7,6 +6,7 @@ import "./style.scss";
 // third-party packages
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
+import { Dialog, DialogContent } from "@mui/material";
 
 function Contact({ openContactModal, closeModal }) {
   const [senderName, setSenderName] = useState("");
@@ -64,14 +64,8 @@ function Contact({ openContactModal, closeModal }) {
   };
 
   return (
-    <>
-      <Modal
-        isOpen={openContactModal}
-        onRequestClose={closeModal}
-        style={styles}
-        className="Modal"
-        overlayClassName="Overlay"
-      >
+    <Dialog open={openContactModal} onClose={closeModal}>
+      <DialogContent className="contact-modal">
         <div className="heading-content">
           <div className="heading">Get in touch!</div>
           <FontAwesomeIcon
@@ -127,15 +121,9 @@ function Contact({ openContactModal, closeModal }) {
             Submit
           </button>
         </div>
-      </Modal>
-    </>
+      </DialogContent>
+    </Dialog>
   );
 }
-
-const styles = {
-  Overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-  },
-};
 
 export default Contact;

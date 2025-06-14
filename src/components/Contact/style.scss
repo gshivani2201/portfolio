@@ -1,99 +1,118 @@
-.Modal {
-    position: absolute;
-    inset: 40px;
-    overflow: auto;
-    border-radius: 4px;
-    outline: none;
-    padding: 24px;
-    background-color: #f2e9e4;
-    width: 30%;
-    margin: auto;
+.contact-modal {
+  inset: 40px;
+  overflow: auto;
+  border-radius: 8px;
+  outline: none;
+  padding: 24px;
+  background-color: #f2e9e4;
+  margin: auto;
+  height: fit-content;
+  color: #22223b;
+  max-height: 700px;
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+
+  .heading-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+    .heading {
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    .close-button {
+      font-size: 1.3em;
+      cursor: pointer;
+    }
+  }
+
+  .contact-body {
+    .field {
+      margin-bottom: 10px;
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 14px;
+        border: none;
+        padding: 4px;
+      }
+    }
+  }
+
+  .required-text {
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .submit-form {
+    text-align: right;
+
+    button {
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      background: #22223b;
+      color: #f2e9e4;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid #22223b;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f2e9e4;
+        color: #22223b;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: rgba(34, 34, 59, 0.5);
+        color: rgb(242, 233, 228, 0.8);
+        border: rgba(34, 34, 59, 0.5);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-modal {
     height: fit-content;
-    color: #22223b;
-    max-height: 70vh;
-    overflow-y: auto;
-    min-width: 10vw;
-    max-width: 40vw;
 
     .heading-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 2em;
-
-        .heading {
-            font-size: 2em;
-            font-weight: 700;
-        }
-
-        .close-button {
-            font-size: 1.3em;
-            cursor: pointer;
-        }
+      .heading {
+        letter-spacing: 0.8px;
+        font-size: 24px;
+      }
     }
 
     .contact-body {
-        .field {
-            margin-bottom: 10px;
+      .field {
+        margin-bottom: 16px;
 
-            h3 {
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
-
-            input,
-            textarea {
-                width: 100%;
-                box-sizing: border-box;
-                border-radius: 3px;
-                font-size: 14px;
-                border: none;
-                padding: 4px;
-            }
+        h3 {
+          font-size: 16px;
+          margin-bottom: 5px;
+          font-weight: 400;
         }
-    }
 
-    .required-text {
-        margin: 5px 0;
-        font-size: 12px;
-        font-weight: 500;
-    }
-
-    .submit-form {
-        text-align: right;
-
-        button {
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            background: #22223b;
-            color: #f2e9e4;
-            padding: 8px 16px;
-            border-radius: 3px;
-            border: 1px solid #22223b;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #f2e9e4;
-                color: #22223b;
-            }
-
-            &:disabled {
-                cursor: not-allowed;
-                background-color: rgba(34, 34, 59, 0.5);
-                color: rgb(242, 233, 228, 0.8);
-                border: rgba(34, 34, 59, 0.5);
-            }
+        input,
+        textarea {
+          padding: 8px;
+          font-size: 16px;
         }
+      }
     }
-
-}
-
-.Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+  }
 }

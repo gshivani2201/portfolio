@@ -48,22 +48,12 @@ h6 {
 }
 
 .xs,
-.sm,
-.md {
-  display: none !important;
+.sm {
+  display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .lg,
-  .md {
-    display: none !important;
-  }
 
-  .xs,
-  .sm {
-    display: block !important;
-  }
-
+@media only screen and (max-width: 1024px) {
   .App {
     height: auto;
   }
@@ -73,14 +63,30 @@ h6 {
   }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
-  .xs,
-  .sm,
-  .lg {
+@media only screen and (max-width: 576px) {
+  .lg,
+  .md {
     display: none !important;
   }
 
+  .xs,
+  .sm {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  .xs,
+  .sm,
+  .lg {
+    display: none;
+  }
+
   .md {
-    display: block !important;
+    display: block;
+  }
+
+  h4 {
+    font-size: 14px;
   }
 }

@@ -1,31 +1,46 @@
 .projects-section {
-    gap: 4em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 24px 32px;
-    text-align: center;
+  gap: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 24px 32px;
+  text-align: center;
 }
 
 .MuiPagination-root {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    .MuiPagination-ul {
-        button {
-            color: #f2e9e4;
-            border: 1px solid rgb(242, 233, 228, 0.5);
+  .MuiPagination-ul {
+    button {
+      color: #f2e9e4;
+      border: 1px solid rgb(242, 233, 228, 0.5);
 
-            &:hover {
-                color: rgb(242, 233, 228, 0.5);
-                background-color: rgb(201, 173, 167, 0.5);
-            }
-        }
-
-        .Mui-selected {
-            color: #22223b;
-            background-color: #C9ADA7;
-        }
+      &:hover {
+        color: rgb(242, 233, 228, 0.5);
+        background-color: rgb(201, 173, 167, 0.5);
+      }
     }
+
+    .Mui-selected {
+      color: #22223b;
+      background-color: #c9ada7;
+    }
+  }
+}
+
+.projects-section.xs {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .projects-section.xs {
+    padding: 24px;
+    display: block;
+  }
+
+  .MuiPagination-root {
+    display: none;
+  }
 }
